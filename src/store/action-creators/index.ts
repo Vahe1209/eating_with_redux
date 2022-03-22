@@ -1,4 +1,4 @@
-import * as UserActionCreators from "./user";
+import * as UserActionCreators from "./food";
 
 export default {
   ...UserActionCreators,

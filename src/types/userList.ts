@@ -1,11 +1,19 @@
 export interface UserState {
   prosList: string[];
+  consList: string[];
 }
 export enum UserActionTypes {
   PROS_LIST = "PROS_LIST",
+  CONS_LIST = "CONS_LIST",
 }
-interface FetchUsersAction {
+interface FetchProsList {
   type: UserActionTypes.PROS_LIST;
   payload: { index: number; value: string };
 }
-export type UserAction = FetchUsersAction;
+
+interface FetchConsList {
+  type: UserActionTypes.CONS_LIST;
+  payload: { index: number; value: string };
+}
+
+export type UserAction = FetchProsList | FetchConsList;
